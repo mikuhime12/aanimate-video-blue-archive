@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>show video</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <video width="1080">
+        <source
+          src="./assets/footage imasino-misaki-blue archive.mp4"
+          type="video/mp4"/>
+      </video>
+      <div class="video-component">
+        <button onclick="play()" class="btn btn-play">play</button>
+        <button onclick="pause()" class="btn btn-pause">pause</button>
+        <button onclick="minimaze()" class="btn btn-minimaze">minimaze</button>
+      </div>
+    </div>
+  </body>
+  <script>
+   const videoComponent = document.querySelector("video");
+   function play() {
+    console.log("playing");
+   videoComponent.play();
+}
+
+function pause() {
+  console.log("pause");
+  videoComponent.pause();
+}
+
+function minimaze() {
+  console.log("minimaze");
+  videoComponent.requestPictureInPicture();
+}
+  </script>
+  </html>
